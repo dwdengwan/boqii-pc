@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <script src="js/js/jquery.min.js"></script>
+    <script src="js/js/popper.min.js"></script>
+    <script src="js/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/boqii_details.css">
+    <script src="js/js/vue.js"></script>
+    <script src="js/js/axios.min.js"></script>
+    <script src="js/boqii_header.js"></script>
+    <script src="js/boqii_footer.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header id="header"></header>
+    <div class="grandparent">
+        <div class="firstparent">
+            <ul>
+                <li><a href="boqii_index1.html">首页</a><span>>></span></li>
+                <li><a href="javascript:;">狗狗专区</a><span>>></span></li>
+                <li><a href="javascript:;">狗狗主粮</a><span>>></span></li>
+                <li><a href="javascript:;">进口粮</a><span>>></span></li>
+                <li><a href="javascript:;">Orijen渴望 无谷幼犬配方狗粮 11.4kg </a><span>>></span></li>
+            </ul>
+        </div>
+        <div class="secondparent">
+            <div class="secondparent_frist_child">
+                <div class="secondparent_fristgrandson">
+                    <div class="secondparent_secondgrandson">
+                        <img src="img/details/shoppicpath11517466475_y.jpg" alt="">
+                    </div>
+                    <div class="secondparent_thiredgrandson">
+                        <img src="img/details/shoppicpath11517466475_y (1).jpg" alt="">
+                        <img src="img/details/shoppicpath21511777752_y.jpg" alt="">
+                        <img src="img/details/shoppicpath31509609581_y.jpg" alt="">
+                        <img src="img/details/shoppicpath41509609581_y.jpg" alt="">
+                        <img src="img/details/shoppicpath51509609581_y.jpg" alt="">
+                    </div>
+                </div>
+                <div class="secondparent_fourthgrandson">
+                    <div>分享到：<img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt=""></div>
+                </div>
+            </div>
+            <div class="secondparent_second_child">
+                <div>
+                    <div class="secondparent_secondchild_fristchild">
+                        <p>Orijen渴望 无谷幼犬配方狗粮 11.4kg</p>
+                        <img src="img/details/ca.gif" alt=""><span>加拿大</span>
+                    </div>
+                    <div class="secondparent_secondchild_secondchild">
+                        <ul>
+                            <li id="li1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;波 奇 价：<span>¥1050</span></li>
+                            <li id="li2">厂商指导价：<span>¥1100.00</span></li>
+                            <li id="li3">&nbsp;&nbsp;&nbsp;&nbsp;配&nbsp;送&nbsp;至：<button>广东</button>&nbsp;&nbsp;&nbsp;无货;&nbsp;&nbsp;<span>支持使用优惠券</span></li>
+                            <li id="li4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;服&nbsp;&nbsp;务：本商品由 <button>香港4仓 </button> 发货</li>
+                            <li id="li5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;税&nbsp;&nbsp;费：<span>¥95.6</span></li>
+                        </ul>
+                    </div>
+                    <div class="secondparent_secondchild_lastchild">
+                        <span>选择到货通知，到货后您将收到免费短信提醒！</span>
+                    </div>
+                </div>
+            </div>
+            <div class="secondparent_last_child">
+                <div class="secondparent_lastchild_fristchild">
+                    <ul>
+                        <li class="lastchild_li">
+                            <div><img src="img/details/btn_z.jpg" alt=""></div>
+                            <div><p>海关监管</p>
+                                <p>100%正品</p></div>
+                        </li>
+                        <li class="lastchild_li">
+                            <div><img src="img/details/m.jpg" alt=""></div>
+                            <div><p>满99元</p>
+                                <p>免运费</p></div>
+                        </li>
+                        <li class="lastchild_li">
+                            <div><img src="img/details/k.jpg" alt=""></div>
+                            <div><p>专属客服</p>
+                                <p>7*15h在线</p></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="secondparent_lastchild_secondchild">
+                    <ul>
+                        <li>所属品牌：<a href="javascript:;">渴望</a></li>
+                        <li>商品编号：1066224</li>
+                        <li>已　　售：1103件</li>
+                        <li>满意指数：4.8分</li>
+                        <li><a href="javascript:;">已有87人评论</a></li>
+                    </ul>
+                </div>
+                <div class="secondparent_lastchild_thiredchild">
+                    <ul>
+                        <li>授权认证： 授权文件</li>
+                        <li>对商品有疑问？</li>
+                    </ul>
+                </div>
+                <div class="secondparent_lastchild_lastchild">
+                    <div><img src="img/details/app_small.jpg" alt=""></div>
+                    <div><p>波奇客户端</p><span>注册立享270元，首单再送330元</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="thiredparent">
+            <div class="thiredparent_firstchild">
+                <div class="thiredparent_firstgrandson">
+                    <ul id="tltj">
+                        <li><p>同类产品推荐</p></li>
+                        <li v-for="key of list">
+                            <img :src="key.img_url" alt="">
+                            <ul>
+                                <li>¥{{key.price}}已售{{key.num}}</li>
+                                <li><a href="javascript:;"> {{key.title}}</a></li>
+                            </ul>
+                        </li>
+                        <!-- <li>
+                            <img src="img/details/shoppicpath11540259744_thumb.jpg" alt="">
+                            <ul>
+                                <li>¥ 179.00已售2491</li>
+                                <li><a href="javascript:;"> 巴西淘淘 力派系列小型犬幼犬粮2kg 进口狗粮</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <img src="img/details/shoppicpath11540454924_thumb.jpg" alt="">
+                            <ul>
+                                <li>¥ 179.00已售2491</li>
+                                <li><a href="javascript:;"> 巴西淘淘 力派系列小型犬幼犬粮2kg 进口狗粮</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <img src="img/details/shoppicpath11540259744_thumb.jpg" alt="">
+                            <ul>
+                                <li>¥ 179.00已售2491</li>
+                                <li><a href="javascript:;"> 巴西淘淘 力派系列小型犬幼犬粮2kg 进口狗粮</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <img src="img/details/shoppicpath11540454924_thumb.jpg" alt="">
+                            <ul>
+                                <li>¥ 179.00已售2491</li>
+                                <li><a href="javascript:;"> 巴西淘淘 力派系列小型犬幼犬粮2kg 进口狗粮</a></li>
+                            </ul>
+                        </li> -->
+                    </ul>
+                </div>
+                <div class="thiredparent_secondgrandson">
+                    <div><p>热卖品牌</p></div>
+                    <div>
+                        <img src="img/details/shopbrand_logo1483094607_thumb.jpg" alt="">
+                        <img src="img/details/shopbrand_logo1459232637_thumb.png" alt="">
+                        <img src="img/details/shopbrand_logo1483094607_thumb.jpg" alt="">
+                        <img src="img/details/shopbrand_logo1459232637_thumb.png" alt="">
+                    </div>
+                </div>
+                <div class="thiredparent_lastgrandson">
+                    <ul class="thiredparent_lastgrandson_ul">
+                        <li>相关分类</li>
+                        <li class="thiredparent_li">
+                            <div class="title">
+                                <a href="javascript:;">狗狗主粮</a>
+                            </div>
+                            <div class="thiredparent_div">
+                                <ul>
+                                    <li>
+                                        <a href="javascript:;">进口粮</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">国产粮</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">处方粮</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">冻干粮</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="thiredparent_li">
+                            <div class="title">
+                                <a href="javascript:;">狗狗零食</a>
+                            </div>
+                            <div class="thiredparent_div ">
+                                <ul>
+                                    <li><a href="javascript:;">进口粮</a></li>
+                                    <li><a href="javascript:;">国产粮</a></li>
+                                    <li><a href="javascript:;">处方粮</a></li>
+                                    <li><a href="javascript:;">冻干粮</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="thiredparent_li">
+                            <div class="title"><a href="javascript:;">营养保健</a></div>
+                            <div class="thiredparent_div ">
+                                <ul>
+                                    <li><a href="javascript:;">进口粮</a></li>
+                                    <li><a href="javascript:;">国产粮</a></li>
+                                    <li><a href="javascript:;">处方粮</a></li>
+                                    <li><a href="javascript:;">冻干粮</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="thiredparent_li">
+                            <div class="title"><a href="javascript:;">医疗护理</a></div>
+                            <div class="thiredparent_div ">
+                                <ul>
+                                    <li><a href="javascript:;">进口粮</a></li>
+                                    <li><a href="javascript:;">国产粮</a></li>
+                                    <li><a href="javascript:;">处方粮</a></li>
+                                    <li><a href="javascript:;">冻干粮</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="thiredparent_li">
+                            <div class="title"><a href="javascript:;">生活日用</a></div>
+                            <div class="thiredparent_div ">
+                                <ul>
+                                    <li><a href="javascript:;">进口粮</a></li>
+                                    <li><a href="javascript:;">国产粮</a></li>
+                                    <li><a href="javascript:;">处方粮</a></li>
+                                    <li><a href="javascript:;">冻干粮</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="thiredparent_li">
+                            <div class="title"><a href="javascript:;">狗狗美容</a></div>
+                            <div class="thiredparent_div ">
+                                <ul>
+                                    <li><a href="javascript:;">进口粮</a></li>
+                                    <li><a href="javascript:;">国产粮</a></li>
+                                    <li><a href="javascript:;">处方粮</a></li>
+                                    <li><a href="javascript:;">冻干粮</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="thiredparent_li">
+                            <div class="title"><a href="javascript:;">狗狗玩具</a></div>
+                            <div class="thiredparent_div ">
+                                <ul>
+                                    <li><a href="javascript:;">进口粮</a></li>
+                                    <li><a href="javascript:;">国产粮</a></li>
+                                    <li><a href="javascript:;">处方粮</a></li>
+                                    <li><a href="javascript:;">冻干粮</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="thiredparent_li">
+                            <div class="title"><a href="javascript:;">出行装备</a></div>
+                            <div class="thiredparent_div ">
+                                <ul>
+                                    <li><a href="javascript:;">进口粮</a></li>
+                                    <li><a href="javascript:;">国产粮</a></li>
+                                    <li><a href="javascript:;">处方粮</a></li>
+                                    <li><a href="javascript:;">冻干粮</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="thiredparent_secondchild">
+                <div class="thiredparent_firstgrandson">
+                    <ul>
+                        <li><a href="#">商品介绍</a></li>
+                        <li><a href="#">商品评论 (87)</a></li>
+                        <li><a href="#">服务说明</a></li>
+                        <li><a href="#">商品咨询 (0)</a></li>
+                    </ul>
+                </div>
+                <div class="thiredparent_secondgrandson">
+                    <ul>
+                        <li>
+                            <p>产品信息Product Information</p>
+                            <img src="img/details/shopimgFile1511777837.jpg" alt="">
+                        </li>
+                        <li>
+                            <p>产品优势Product Advantage</p>
+                            <img src="img/details/shopimgFile1522816335.jpg" alt="">
+                            <img src="img/details/shopimgFile1509609617.jpg" alt="">
+                            <img src="img/details/shopimgFile1511777776.jpg" alt="">
+                            <img src="img/details/shopimgFile1511777778.jpg" alt="">
+                            <img src="img/details/shopimgFile1522816335.jpg" alt="">
+                            <img src="img/details/shopimgFile1509609617.jpg" alt="">
+                            <img src="img/details/shopimgFile1511777776.jpg" alt="">
+                            <img src="img/details/shopimgFile1511777778.jpg" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="lastparent">
+            <ul>
+                <li><p>海关监管<br>假一赔十</p></li>
+                <li><p>正规清关<br>依法纳税</p></li>
+                <li><p>全球直采<br>正品保证</p></li>
+                <li><p>诚信电商<br>值得依赖</p></li>
+            </ul>
+        </div>
+    </div>
+    <footer id="footer"></footer>
+    <script src="js/js/jquery-1.11.3.js"></script>
+    <script src="js/boqii.details.js"></script>
+    <script>
+         axios.get("http://127.0.0.1:3000/getDetailsList").then(res=>{
+            console.log(res.data);
+            new Vue({
+                el:"#tltj",
+                data:{
+                    list:[]
+                },
+                created() {
+                    this.list=res.data;
+                },
+            })
+        })
+    </script>
+</body>
+</html>

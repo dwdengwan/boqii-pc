@@ -1,0 +1,220 @@
+*{
+	padding:0px;margin:0px;
+}
+body{
+	margin:0 auto;
+    width:1300px;
+}
+/* 消除所有ul>li中的点 */
+ul>li{
+	list-style-type:none;
+}
+a{
+	color:#333;
+	text-decoration:none;
+}
+a:hover{
+    color:#e53;
+    text-decoration:none;
+}
+.grandparent{
+    margin: 0 auto;
+    font-size: 12px;
+    color: #000;
+    font-family: "Microsoft YaHei", Arial, Helvetica,sans-serif;
+    margin-left:50px;
+    /* border:1px solid red; */
+    display:flex;
+	flex-flow:column nowrap;
+    justify-content:center;
+}
+.firstparent{
+    /* border:1px solid red; */
+    display:flex;
+	flex-flow:row nowrap;
+    justify-content:space-around;
+}
+.firstparent .firstparent_firstchild ul{
+    width:180px;
+    /* border:1px solid red; */
+    display:flex;
+	flex-flow:column nowrap;
+    justify-content:space-around;
+}
+.firstparent .firstparent_firstchild ul li{
+    font-size:16px;
+    margin-left:10px;
+    height:40px;
+    border-bottom:1px solid #ccc;
+    line-height:3;
+}
+.firstparent .firstparent_secondchild ul{
+    width: 800px;
+    height: 360px;
+    margin-top:20px;
+    position: relative;
+    /* border:1px solid #000; */
+    display:flex;
+	flex-flow:row nowrap;
+    justify-content:center;
+}
+.firstparent .firstparent_lastchild{
+    /* border:1px solid #000; */
+    display:flex;
+	flex-flow:column nowrap;
+    justify-content:center;
+}
+.lunbotu li{
+    position: absolute;
+    display: none;
+    width: 800px;
+    height: 360px;
+}
+.lunbotu li.show{
+    display:block;
+}
+.secondparent{
+    margin-top:10px;
+    display:flex;
+	flex-flow:column nowrap;
+    justify-content:center;
+    border:1px solid #eee;
+
+}
+.secondparent_fristchild{
+    height: 40px;
+    display:flex;
+	flex-flow:row nowrap;
+    justify-content:space-between;
+    border-bottom:2px solid #e53;
+
+}
+.secondparent_fristchild ul{
+    display:flex;
+	flex-flow:row nowrap;
+    justify-content:flex-start;
+    line-height: 2;
+    
+}
+.secondparent_fristchild ul li{
+    /* margin-left:15px; */
+    padding-left: 20px;
+    height: 40px;
+    font-size:14px;
+    color:#333;
+    line-height: 40px;
+}
+.secondparent_fristchild ul li:first-child{
+    color:#e53 !important;
+}
+.secondparent_fristchild ul:first-child li:not(:first-child){
+    padding-left:15px;
+    padding-right: 15px;
+    margin-left:10px;
+    font-size:16px;
+}
+.secondparent_fristchild ul:first-child li:not(:first-child):hover{
+    background:#e53;
+}
+.secondparent_fristchild ul:first-child li:not(:first-child) a:hover{
+    color:#fff;
+}
+.secondparent_secondchild{
+    font-size: 14px;
+    /* color: #666; */
+    height: 220px;
+}
+.secondparent_secondchild ul{ 
+    display:flex;
+	flex-flow:row nowrap;
+    justify-content:space-between;
+}
+.secondparent_secondchild ul>li{
+    width: 196px;
+    height: 208px;
+    display:flex;
+	flex-flow:column nowrap;
+    justify-content:center;
+    margin-top:10px;
+    margin-left:10px;
+}
+.secondparent_secondchild ul>li img{
+    /* border:1px solid red; */
+    margin-left:22px;
+    width: 160px;
+}
+.secondparent_secondchild ul>li p{
+    margin:0px;
+    padding:0px;
+    margin-left:25px;
+}
+.secondparent_secondchild ul>li p span:first-child{
+    color:#e53;
+}
+.thiredparent{
+    margin-top:30px;
+    border-top:2px solid #f90;
+    display:flex;
+	flex-flow:row nowrap;
+    justify-content:space-around;
+}
+.thiredparent_firstchild{
+    background:#eee;
+    /* border:1px solid red; */
+    text-align: center;
+    width: 190px;
+    display:flex;
+	flex-flow:column nowrap;
+    justify-content:flex-start;
+}
+.thiredparent_firstchild ul li{
+    width: 190px;
+    /* border:1px solid red; */
+    background:#eee;
+    height: 40px;
+    font-size: 16px;
+    line-height: 40px;
+}
+.thiredparent_firstchild_firstgrandson{
+    width: 190px;
+    height: 72px;
+    background: #f90;
+    line-height: 72px;
+    font-size: 22px;
+    color: #fff;
+}
+.thiredparent_firstchild ul:first-child:li:hover{
+    background:red;
+}
+.thiredparent_firstchild .thiredparent_secondgrandson_ul li:hover{
+    background:#ccc;
+}
+.thiredparent_firstchild_lastgrandson .thiredparent_lastgrandson_ul{
+    background: #eee;
+    width: 190px;
+    display:flex;
+	flex-flow:row wrap;
+    justify-content:space-around;
+}
+.thiredparent_firstchild_lastgrandson .thiredparent_lastgrandson_ul li{
+    width: 90px;
+}
+.thiredparent_lastchild{
+    display:flex;
+	flex-flow:column nowrap;
+    justify-content:space-around;
+}
+.thiredparent_secondchild ul{
+    font-size: 14px;
+    color: #666;
+    width: 700px;
+    display:flex;
+	flex-flow:row wrap;
+    justify-content:space-around;
+}
+.thiredparent_secondchild ul li p{
+    margin-left:20px;
+}
+.thiredparent_secondchild ul li p span:first-child{
+    color:#e53;
+}

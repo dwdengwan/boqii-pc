@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/boqii_list2.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+    <script src="js/js/vue.js"></script>
+    <script src="js/js/ajax.js"></script>
+    <script src="js/js/jquery-1.11.3.js"></script>
+    <script src="js/boqii_header.js"></script>
+    <script src="js/boqii_footer.js"></script>
+</head>
+<body>
+    <header id="header"></header>
+    <div class="grandparent">
+        <div class="fristparent">
+            <div class="fristparent_firstchild">
+                <ul>
+                    <li><a href="javascript:;">首页</a> > </li>
+                    <li><a href="javascript:;">狗狗专区</a> > </li>
+                    <li><a href="javascript:;">狗狗主粮</a> > </li>
+                    <li><a href="javascript:;"><input type="text" placeholder="在结果中查找"></a></li>
+                </ul>
+            </div>
+            <div class="fristparent_lastchild">
+                <a href="javasript:;">清空已选条件</a>
+            </div>
+        </div>
+        <div class="secondparent">
+            <div class="secondparent_firstchild">
+                <div class="secondparent_1_firstchild">
+                    <ul>
+                        <li>
+                            <a href="javascript:;">狗狗商品</a>
+                            <!-- <div>
+                                <ul>
+                                    <li><a href="javascript:;">进口粮</a></li>
+                                    <li><a href="javascript:;">国产粮</a></li>
+                                    <li><a href="javascript:;">处方粮</a></li>
+                                    <li><a href="javascript:;">冻干粮</a></li>
+                                </ul>
+                            </div> -->
+                        </li>
+                        <li class="actived"><a href="javascript:;">狗狗主粮</a></li>
+                        <li><a href="javascript:;">狗狗零食</a></li>
+                        <li><a href="javascript:;">医疗护理</a></li>
+                        <li><a href="javascript:;">营养保健</a></li>
+                        <li><a href="javascript:;">生活日用</a></li>
+                        <li><a href="javascript:;">出行装备</a></li>
+                        <li><a href="javascript:;">狗狗美容</a></li>
+                        <li><a href="javascript:;">狗狗玩具</a></li>
+                    </ul>
+                </div>
+                <div class="secondparent_1_secondchild" id="rm">
+                    <p>热卖推荐</p>
+                    <div class="div1" v-for="key of list">
+                        <img :src="key.img_url" alt="">
+                        <div>
+                            <span>¥ {{key.price}}</span>
+                            <span>已售{{key.num}}</span>
+                        </div>
+                        <p><a href="javascript:;">{{key.title}}</a></p>
+                    </div>
+                </div>
+                <div class="secondparent_1_lastchild" >
+                    <div>品牌推荐</div>
+                    <div>
+                        <ul id="pptj">
+                            <li v-for="key of list"><img :src="key.img_url" alt=""></li>
+                            <!-- <li><img src="img/list2/listsecond2.jpg" alt=""></li>
+                            <li><img src="img/list2/listsecond2.jpg" alt=""></li>
+                            <li><img src="img/list2/listsecond2.jpg" alt=""></li>
+                            <li><img src="img/list2/listsecond2.jpg" alt=""></li>
+                            <li><img src="img/list2/listsecond2.jpg" alt=""></li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="secondparent_secondchild">
+                <div class="secondparent_2_firstchild">
+                    <div class="secondparent_2_firstgrandson">
+                        <div>
+                            <p>品牌</p>
+                            <ul>
+                                <li><a href="javascript:;">牛油果</a></li>
+                                <li><a href="javascript:;">巅峰ZIWI</a></li>
+                                <li><a href="javascript:;">爱慕思</a></li>
+                                <li><a href="javascript:;">CACOLLY/奥可丽</a></li>
+                                <li><a href="javascript:;">益之选</a></li>
+                                <li><a href="javascript:;">啃贝滋</a></li>
+                                <li><a href="javascript:;">麻利</a></li>
+                                <li><a href="javascript:;">魔咖</a></li>
+                                <li><a href="javascript:;">LOTUS莲花</a></li>
+                                <li><a href="javascript:;">KOOKUT酷客</a></li>
+                                <li><a href="javascript:;">极誉</a></li>
+                                <li><a href="javascript:;">爱娣</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <span><a href="javascript:;">+多选</a></span>
+                            <span><a href="javascript:;">更多</a></span>
+                        </div>
+                    </div>
+                    <div class="secondparent_2_secondgrandson">
+                        <div>
+                            <p>犬种</p>
+                            <ul>
+                                <li><a href="javascript:;">牛油果</a></li>
+                                <li><a href="javascript:;">巅峰ZIWI</a></li>
+                                <li><a href="javascript:;">爱慕思</a></li>
+                                <li><a href="javascript:;">CACOLLY/奥可丽</a></li>
+                                <li><a href="javascript:;">益之选</a></li>
+                                <li><a href="javascript:;">啃贝滋</a></li>
+                                <li><a href="javascript:;">麻利</a></li>
+                                <li><a href="javascript:;">魔咖</a></li>
+                                <li><a href="javascript:;">LOTUS莲花</a></li>
+                                <li><a href="javascript:;">KOOKUT酷客</a></li>
+                                <li><a href="javascript:;">极誉</a></li>
+                                <li><a href="javascript:;">爱娣</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="secondparent_2_secondgrandson">
+                        <div>
+                            <p>产地</p>
+                            <ul>
+                                <li><a href="javascript:;">牛油果</a></li>
+                                <li><a href="javascript:;">巅峰ZIWI</a></li>
+                                <li><a href="javascript:;">爱慕思</a></li>
+                                <li><a href="javascript:;">CACOLLY/奥可丽</a></li>
+                                <li><a href="javascript:;">益之选</a></li>
+                                <li><a href="javascript:;">啃贝滋</a></li>
+                                <li><a href="javascript:;">麻利</a></li>
+                                <li><a href="javascript:;">魔咖</a></li>
+                                <li><a href="javascript:;">LOTUS莲花</a></li>
+                                <li><a href="javascript:;">KOOKUT酷客</a></li>
+                                <li><a href="javascript:;">极誉</a></li>
+                                <li><a href="javascript:;">爱娣</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="secondparent_2_secondchild">
+                    <div>
+                        <span>排序:</span>
+                        <ul onclick="paixu()">
+                            <li class="actived"><a href="javascript:;" class="actived">综合排序</a></li>
+                            <li><a href="javascript:;">销量</a></li>
+                            <li><a href="javascript:;">人气</a></li>
+                            <li><a href="javascript:;">价格</a></li>
+                            <li><a href="javascript:;">新品</a></li>
+                            <li><a href="javascript:;">评论</a></li>
+                        </ul>
+                        <input type="checkbox">全球购
+                        <input type="checkbox">只显示有货
+                    </div>
+                    <div id="count">
+                        <span>共1693件商品</span>
+                        <span><em style="color:#e53">2</em>/25</span>
+                        <button onclick="count(-1)">&lt;</button>
+                        <button onclick="count(+1)">&gt;</button>
+                    </div>
+                </div>
+                <div class="secondparent_2_lastchid" id="main">
+                    <div class="secondparent_2_biggrandson" v-for="key of list">
+                        <div class="secondparent_2_firstgrandson">
+                            <img src="img/list2/list2_joey1.png" alt="">
+                            <!-- <img src="img/list2/list2_list1.jpg" alt=""> -->
+                            <img :src="key.img_url" alt="">
+                        </div>
+                        <div class="secondparent_2_secondgrandson">
+                            <span>¥{{key.price1}} </span>&nbsp;&nbsp;&nbsp;
+                            <span>{{key.price2}}元/斤</span>
+                        </div>
+                        <div class="secondparent_2_thiredgrandson">
+                            <div>直降</div>
+                            <div>包邮</div>
+                        </div>
+                        <div class="secondparent_2_fourthgrandson">
+                            <p>
+                                <span>冰雪节</span>&nbsp;{{key.title}}
+                            </p>
+                        </div>
+                        <p>{{key.subtitle}}</p>
+                        <div class="secondparent_2_fifthgrandson">
+                            <span>已售{{key.num1}}</span>&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;
+                            <span>已有<em>{{key.num2}}</em>人评价</span>
+                        </div>
+                        <div class="secondparent_2_lastgrandson">
+                            <div>
+                                <p>加入购物车</p>
+                                <i class="iconfont icon-a"></i>
+                            </div>
+                            <div>
+                                收藏
+                                <!-- <img src="img/list2/list2_shouchang2.png" alt=""> -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="secondparent_2_biggrandson">
+                        <div class="secondparent_2_firstgrandson">
+                                <img src="img/list2/list2_joey1.png" alt="">
+                                <img src="img/list2/list2_last1.jpg" alt="">
+                        </div>
+                        <div class="secondparent_2_secondgrandson">
+                            <span>¥63.9 </span>&nbsp;&nbsp;&nbsp;
+                            <span>31.95元/斤</span>
+                        </div>
+                        <div class="secondparent_2_thiredgrandson">
+                            <div>直降</div>
+                            <div>包邮</div>
+                        </div>
+                        <div class="secondparent_2_fourthgrandson">
+                            <p>
+                                <span>冰雪节</span>&nbsp;法国皇家ROYAL CANIN 小型犬离乳期奶糕1kg MIS30
+                            </p>
+                        </div>
+                        <p>12.24-1.1 冰雪节充值最高充值5000送</p>
+                        <div class="secondparent_2_fifthgrandson">
+                            <span>已售507845</span>&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;
+                            <span>已有<em>2287</em>人评价</span>
+                        </div>
+                        <div class="secondparent_2_lastgrandson">
+                                <div>加入购物车</div>
+                                <div>收藏</div>
+                        </div>
+                    </div>
+                    <div class="secondparent_2_biggrandson">
+                                <div class="secondparent_2_firstgrandson">
+                                    <img src="img/list2/list2_joey1.png" alt="">
+                                    <img src="img/list2/list2_last1.jpg" alt="">
+                                </div>
+                                <div class="secondparent_2_secondgrandson">
+                                    <span>¥63.9 </span>&nbsp;&nbsp;&nbsp;
+                                    <span>31.95元/斤</span>
+                                </div>
+                                <div class="secondparent_2_thiredgrandson">
+                                    <div>直降</div>
+                                    <div>包邮</div>
+                                </div>
+                                <div class="secondparent_2_fourthgrandson">
+                                    <p>
+                                        <span>冰雪节</span>&nbsp;法国皇家ROYAL CANIN 小型犬离乳期奶糕1kg MIS30
+                                    </p>
+                                </div>
+                                <p>12.24-1.1 冰雪节充值最高充值5000送</p>
+                                <div class="secondparent_2_fifthgrandson">
+                                    <span>已售507845</span>&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;
+                                    <span>已有<em>2287</em>人评价</span>
+                                </div>
+                                <div class="secondparent_2_lastgrandson">
+                                    <div>加入购物车</div>
+                                    <div>收藏</div>
+                                </div>
+                    </div>
+                    <div class="secondparent_2_biggrandson">
+                                    <div class="secondparent_2_firstgrandson">
+                                        <img src="img/list2/list2_joey1.png" alt="">
+                                        <img src="img/list2/list2_last1.jpg" alt="">
+                                    </div>
+                                    <div class="secondparent_2_secondgrandson">
+                                        <span>¥63.9 </span>&nbsp;&nbsp;&nbsp;
+                                        <span>31.95元/斤</span>
+                                    </div>
+                                    <div class="secondparent_2_thiredgrandson">
+                                        <div>直降</div>
+                                        <div>包邮</div>
+                                    </div>
+                                    <div class="secondparent_2_fourthgrandson">
+                                        <p>
+                                            <span>冰雪节</span>&nbsp;法国皇家ROYAL CANIN 小型犬离乳期奶糕1kg MIS30
+                                        </p>
+                                    </div>
+                                    <p>12.24-1.1 冰雪节充值最高充值5000送</p>
+                                    <div class="secondparent_2_fifthgrandson">
+                                        <span>已售507845</span>&nbsp;&nbsp;&nbsp;
+                                        &nbsp;&nbsp;&nbsp;
+                                        <span>已有<em>2287</em>人评价</span>
+                                    </div>
+                                    <div class="secondparent_2_lastgrandson">
+                                        <div>加入购物车</div>
+                                        <div>收藏</div>
+                                    </div>
+                    </div>
+                    <div class="secondparent_2_biggrandson">
+                    <div class="secondparent_2_firstgrandson">
+                        <img src="img/list2/list2_joey1.png" alt="">
+                        <img src="img/list2/list2_last1.jpg" alt="">
+                    </div>
+                    <div class="secondparent_2_secondgrandson">
+                        <span>¥63.9 </span>&nbsp;&nbsp;&nbsp;
+                        <span>31.95元/斤</span>
+                    </div>
+                    <div class="secondparent_2_thiredgrandson">
+                        <div>直降</div>
+                        <div>包邮</div>
+                    </div>
+                    <div class="secondparent_2_fourthgrandson">
+                        <p>
+                            <span>冰雪节</span>&nbsp;法国皇家ROYAL CANIN 小型犬离乳期奶糕1kg MIS30
+                        </p>
+                    </div>
+                    <p>12.24-1.1 冰雪节充值最高充值5000送</p>
+                    <div class="secondparent_2_fifthgrandson">
+                        <span>已售507845</span>&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;
+                        <span>已有<em>2287</em>人评价</span>
+                    </div>
+                    <div class="secondparent_2_lastgrandson">
+                        <div>加入购物车</div>
+                        <div>收藏</div>
+                    </div>
+                    </div>
+                    <div class="secondparent_2_biggrandson">
+                                            <div class="secondparent_2_firstgrandson">
+                                                <img src="img/list2/list2_joey1.png" alt="">
+                                                <img src="img/list2/list2_last1.jpg" alt="">
+                                            </div>
+                                            <div class="secondparent_2_secondgrandson">
+                                                <span>¥63.9 </span>&nbsp;&nbsp;&nbsp;
+                                                <span>31.95元/斤</span>
+                                            </div>
+                                            <div class="secondparent_2_thiredgrandson">
+                                                <div>直降</div>
+                                                <div>包邮</div>
+                                            </div>
+                                            <div class="secondparent_2_fourthgrandson">
+                                                <p>
+                                                    <span>冰雪节</span>&nbsp;法国皇家ROYAL CANIN 小型犬离乳期奶糕1kg MIS30
+                                                </p>
+                                            </div>
+                                            <p>12.24-1.1 冰雪节充值最高充值5000送</p>
+                                            <div class="secondparent_2_fifthgrandson">
+                                                <span>已售507845</span>&nbsp;&nbsp;&nbsp;
+                                                &nbsp;&nbsp;&nbsp;
+                                                <span>已有<em>2287</em>人评价</span>
+                                            </div>
+                                            <div class="secondparent_2_lastgrandson">
+                                                <div>加入购物车</div>
+                                                <div>收藏</div>
+                                            </div>
+                    </div>
+                    <div class="secondparent_2_biggrandson">
+                                                <div class="secondparent_2_firstgrandson">
+                                                    <img src="img/list2/list2_joey1.png" alt="">
+                                                    <img src="img/list2/list2_last1.jpg" alt="">
+                                                </div>
+                                                <div class="secondparent_2_secondgrandson">
+                                                    <span>¥63.9 </span>&nbsp;&nbsp;&nbsp;
+                                                    <span>31.95元/斤</span>
+                                                </div>
+                                                <div class="secondparent_2_thiredgrandson">
+                                                    <div>直降</div>
+                                                    <div>包邮</div>
+                                                </div>
+                                                <div class="secondparent_2_fourthgrandson">
+                                                    <p>
+                                                        <span>冰雪节</span>&nbsp;法国皇家ROYAL CANIN 小型犬离乳期奶糕1kg MIS30
+                                                    </p>
+                                                </div>
+                                                <p>12.24-1.1 冰雪节充值最高充值5000送</p>
+                                                <div class="secondparent_2_fifthgrandson">
+                                                    <span>已售507845</span>&nbsp;&nbsp;&nbsp;
+                                                    &nbsp;&nbsp;&nbsp;
+                                                    <span>已有<em>2287</em>人评价</span>
+                                                </div>
+                                                <div class="secondparent_2_lastgrandson">
+                                                    <div>加入购物车</div>
+                                                    <div>收藏</div>
+                                                </div>
+                    </div>
+                    <div class="secondparent_2_biggrandson">
+                                                    <div class="secondparent_2_firstgrandson">
+                                                        <img src="img/list2/list2_joey1.png" alt="">
+                                                        <img src="img/list2/list2_last1.jpg" alt="">
+                                                    </div>
+                                                    <div class="secondparent_2_secondgrandson">
+                                                        <span>¥63.9 </span>&nbsp;&nbsp;&nbsp;
+                                                        <span>31.95元/斤</span>
+                                                    </div>
+                                                    <div class="secondparent_2_thiredgrandson">
+                                                        <div>直降</div>
+                                                        <div>包邮</div>
+                                                    </div>
+                                                    <div class="secondparent_2_fourthgrandson">
+                                                        <p>
+                                                            <span>冰雪节</span>&nbsp;法国皇家ROYAL CANIN 小型犬离乳期奶糕1kg MIS30
+                                                        </p>
+                                                    </div>
+                                                    <p>12.24-1.1 冰雪节充值最高充值5000送</p>
+                                                    <div class="secondparent_2_fifthgrandson">
+                                                        <span>已售507845</span>&nbsp;&nbsp;&nbsp;
+                                                        &nbsp;&nbsp;&nbsp;
+                                                        <span>已有<em>2287</em>人评价</span>
+                                                    </div>
+                                                    <div class="secondparent_2_lastgrandson">
+                                                        <div>加入购物车</div>
+                                                        <div>收藏</div>
+                                                    </div>
+                    </div>
+                    <div class="secondparent_2_biggrandson">
+                                                        <div class="secondparent_2_firstgrandson">
+                                                            <img src="img/list2/list2_joey1.png" alt="">
+                                                            <img src="img/list2/list2_last1.jpg" alt="">
+                                                        </div>
+                                                        <div class="secondparent_2_secondgrandson">
+                                                            <span>¥63.9 </span>&nbsp;&nbsp;&nbsp;
+                                                            <span>31.95元/斤</span>
+                                                        </div>
+                                                        <div class="secondparent_2_thiredgrandson">
+                                                            <div>直降</div>
+                                                            <div>包邮</div>
+                                                        </div>
+                                                        <div class="secondparent_2_fourthgrandson">
+                                                            <p>
+                                                                <span>冰雪节</span>&nbsp;法国皇家ROYAL CANIN 小型犬离乳期奶糕1kg MIS30
+                                                            </p>
+                                                        </div>
+                                                        <p>12.24-1.1 冰雪节充值最高充值5000送</p>
+                                                        <div class="secondparent_2_fifthgrandson">
+                                                            <span>已售507845</span>&nbsp;&nbsp;&nbsp;
+                                                            &nbsp;&nbsp;&nbsp;
+                                                            <span>已有<em>2287</em>人评价</span>
+                                                        </div>
+                                                        <div class="secondparent_2_lastgrandson">
+                                                            <div>加入购物车</div>
+                                                            <div>收藏</div>
+                                                        </div>
+                    </div>
+                    <div class="secondparent_2_biggrandson">
+                        <div class="secondparent_2_firstgrandson">
+                            <img src="img/list2/list2_joey1.png" alt="">
+                            <img src="img/list2/list2_last1.jpg" alt="">
+                        </div>
+                        <div class="secondparent_2_secondgrandson">
+                            <span>¥63.9 </span>&nbsp;&nbsp;&nbsp;
+                            <span>31.95元/斤</span>
+                        </div>
+                        <div class="secondparent_2_thiredgrandson">
+                            <div>直降</div>
+                            <div>包邮</div>
+                        </div>
+                        <div class="secondparent_2_fourthgrandson">
+                            <p>
+                                <span>冰雪节</span>&nbsp;法国皇家ROYAL CANIN 小型犬离乳期奶糕1kg MIS30
+                            </p>
+                        </div>
+                        <p>12.24-1.1 冰雪节充值最高充值5000送</p>
+                        <div class="secondparent_2_fifthgrandson">
+                            <span>已售507845</span>&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;
+                            <span>已有<em>2287</em>人评价</span>
+                        </div>
+                        <div class="secondparent_2_lastgrandson">
+                            <div>加入购物车</div>
+                            <div>收藏</div>
+                        </div>
+                    </div>
+                    <div class="secondparent_2_biggrandson">
+                        <div class="secondparent_2_firstgrandson">
+                            <img src="img/list2/list2_joey1.png" alt="">
+                            <img src="img/list2/list2_last1.jpg" alt="">
+                        </div>
+                        <div class="secondparent_2_secondgrandson">
+                            <span>¥63.9 </span>&nbsp;&nbsp;&nbsp;
+                            <span>31.95元/斤</span>
+                        </div>
+                        <div class="secondparent_2_thiredgrandson">
+                            <div>直降</div>
+                            <div>包邮</div>
+                        </div>
+                        <div class="secondparent_2_fourthgrandson">
+                            <p>
+                                <span>冰雪节</span>&nbsp;法国皇家ROYAL CANIN 小型犬离乳期奶糕1kg MIS30
+                            </p>
+                        </div>
+                        <p>12.24-1.1 冰雪节充值最高充值5000送</p>
+                        <div class="secondparent_2_fifthgrandson">
+                            <span>已售507845</span>&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;
+                            <span>已有<em>2287</em>人评价</span>
+                        </div>
+                        <div class="secondparent_2_lastgrandson">
+                            <div>加入购物车</div>
+                            <div>收藏</div>
+                        </div>
+                    </div>
+                    <div class="secondparent_2_biggrandson">
+                        <div class="secondparent_2_firstgrandson">
+                            <img src="img/list2/list2_joey1.png" alt="">
+                            <img src="img/list2/list2_last1.jpg" alt="">
+                        </div>
+                        <div class="secondparent_2_secondgrandson">
+                            <span>¥63.9 </span>&nbsp;&nbsp;&nbsp;
+                            <span>31.95元/斤</span>
+                        </div>
+                        <div class="secondparent_2_thiredgrandson">
+                            <div>直降</div>
+                            <div>包邮</div>
+                        </div>
+                        <div class="secondparent_2_fourthgrandson">
+                            <p>
+                                <span>冰雪节</span>&nbsp;法国皇家ROYAL CANIN 小型犬离乳期奶糕1kg MIS30
+                            </p>
+                        </div>
+                        <p>12.24-1.1 冰雪节充值最高充值5000送</p>
+                        <div class="secondparent_2_fifthgrandson">
+                            <span>已售507845</span>&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;
+                            <span>已有<em>2287</em>人评价</span>
+                        </div>
+                        <div class="secondparent_2_lastgrandson">
+                            <div>加入购物车</div>
+                            <div>收藏</div>
+                        </div>
+                    </div>  -->
+                </div>
+            </div>
+        </div>
+        <div class="lastparent">
+            <div class="lastparent_firstchild">
+                <!-- <ul onclick="ulbb()"> -->
+                <ul>
+                    <li title="跳转到首页" onclick="first()"><a href="javascript:;">首页</a></li>
+                    <li title="跳转到上一页" onclick="change(true)"><a href="javascript:;">&lt;上一页</a></li>
+                    <li title="跳转到第1页" class=""><a href="javascript:;" class="">1</a></li>
+                    <li title="跳转到第2页" class="actived"><a href="javascript:;" class="stauts">2</a></li>
+                    <li title="跳转到第3页" class=""><a href="javascript:;" class="">3</a></li>
+                    <li title="跳转到第4页" class=""><a href="javascript:;" class="">4</a></li>
+                    <li title="跳转到第5页" class=""><a href="javascript:;" class="">5</a></li>
+                    <li title="跳转到第6页" class=""><a href="javascript:;" class="">6</a></li>
+                    <li title="跳转到第7页" class=""><a href="javascript:;" class="">7</a></li>
+                    <li title="跳转到第8页" class=""><a href="javascript:;" class="">8</a></li>
+                    <li title="跳转到第9页" class=""><a href="javascript:;" class="">9</a></li>
+                    <li title="跳转到下一页" onclick="change(false)"><a href="javascript:;">
+                        下一页&gt;</a>
+                    </li>
+                    <li title="跳转到末页" onclick="last()"><a href="javascript:;">末页</a></li>
+                </ul>
+            </div>
+            <div class="lastparent_lastchild">
+                &nbsp;&nbsp;&nbsp;&nbsp;<span>共25页</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                <span>到第</span>
+                <input type="text"/>
+                <span>页</span>
+                <button>确定</button>
+            </div>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+    <footer id="footer"></footer>
+    <script src="js/js/jquery-1.11.3.js"></script>
+    <!-- <script>
+        new Vue({
+            el:".lastparent",
+            data:{
+                stauts:"actived",
+            },
+            methods:{
+                change(i){
+                    // alert("不疼！")
+                    if(i>0){
+                        this.stauts.next().stauts="actived";
+                        this.stauts.siblings().stauts="";
+                    }
+                }
+            }
+        })
+    </script> -->
+    <script>
+        function paixu(){
+            console.log($("secondparent_2_secondchild ul"));
+            $("secondparent_2_secondchild ul li").addClass("actived")
+            .siblings().removeClass("actived");
+        }
+        function count(i){
+            if($("#count em").val()>0){
+                $("#count em").val()+=i;
+            }
+        }
+        function change(bool){
+            console.log($(".lastparent_firstchild ul .actived").children().text())
+            if(bool){
+                if($(".lastparent_firstchild ul .actived").children().text()!=1){
+                    $(".lastparent_firstchild ul .actived")
+                    .removeClass("actived").prev().addClass("actived");
+                }
+            }else{
+                if($(".lastparent_firstchild ul .actived").children().text()!=9){
+                    $(".lastparent_firstchild ul .actived")
+                    .removeClass("actived").next().addClass("actived");
+                }
+            }
+        }
+        function first(){
+            $(".lastparent_firstchild ul li:nth-child(3)")
+            .addClass("actived").siblings().removeClass("actived");
+        }
+        function last(){
+            $(".lastparent_firstchild ul li:nth-child(11)")
+            .addClass("actived").siblings().removeClass("actived");
+        }
+            $("parent").on("click",".lastparent_firstchild ul",function(){
+            // alert(`${$(".lastparent_firstchild ul li").index()}`);
+            alert("aa");
+            // $(this).children().addClass("actived")
+        })
+    </script>
+    <script>
+
+    </script>
+    <!-- <script>
+        new Vue({
+            el:".secondparent_2_lastchid",
+            data:{
+                list:[],
+                pno:0,
+                pageSize:6,
+            },
+            methods:{
+                login(){
+                var url="http://127.0.0.1:3000/getGoodsList?pno="+this.pno+"&pageSize="+this.pageSize;
+                this.axios.get(url).then(result=>{
+                    console.log(result.data);
+                    this.list=result.data.data;
+                   console.log(this.list);
+                })
+            },
+            },
+            created(){
+                this.login();
+            }
+        })
+    </script> -->
+    <script src="js/boqii_list2.js"></script>
+    <script src="js/js/axios.min.js"></script>
+</body>
+</html>

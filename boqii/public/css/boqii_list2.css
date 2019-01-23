@@ -1,0 +1,508 @@
+*{
+	padding:0px;margin:0px;
+}
+body{
+	margin:0 auto;
+    width:1300px;
+}
+/* 消除所有ul>li中的点 */
+ul>li{
+	list-style-type:none;
+}
+a{
+	color:#333;
+	text-decoration:none;
+}
+a:hover{
+    color:#e53;
+    text-decoration:none;
+}
+.grandparent{
+    margin: 0 auto;
+    font-size: 12px;
+    color: #000;
+    font-family: "Microsoft YaHei", Arial, Helvetica,sans-serif;
+    margin-left:50px;
+    display:flex;
+	flex-flow:column nowrap;
+    justify-content:center;
+    /* border:1px solid red; */
+}
+.fristparent{
+    height: 50px;
+    line-height: 50px;
+    margin-top:20px; 
+    background:#f3f3f3;
+    display:flex;
+	flex-flow:row nowrap;
+    justify-content:space-between;
+    /* border:1px solid pink; */
+}
+.fristparent .fristparent_firstchild ul{
+    display:flex;
+	flex-flow:row nowrap;
+    justify-content:flex-start;
+    /* border:1px solid pink; */
+}
+.fristparent .fristparent_firstchild ul input{
+    background-image: url("../img/list2/list_icon001.png");
+    background-repeat: no-repeat;
+    background-position: 150px 6px;
+    height: 26px;
+    width: 167px;
+    border:1px solid #ccc;
+}
+.secondparent{
+    width: 190px;
+    margin-top:20px;
+    display:flex;
+	flex-flow:row nowrap;
+    justify-content:flex-start;
+    /* border:1px solid pink; */
+}
+.secondparent .secondparent_firstchild{
+    display:flex;
+	flex-flow:column nowrap;
+    justify-content:flex-start;
+    /* border:1px solid pink; */
+}
+.secondparent_firstchild .secondparent_1_firstchild ul li{
+    text-align: center;
+    line-height: 40px;
+    font-size:14px;
+    border:1px solid #ddd;
+    background:#cfcfcf;
+    width: 190px;
+    height: 40px;
+}
+.secondparent_firstchild .secondparent_1_firstchild ul li:first-child{
+    background-image: url("../img/list2/list_icon002.png");
+    background-repeat: no-repeat;
+    background-position: 30px 8px;
+}
+.secondparent_firstchild .secondparent_1_firstchild ul li:not(:first-child){
+    background-image: url("../img/list2/list2_secondchild2.png");
+    background-repeat: no-repeat;
+    background-position: 150px 16px;
+}
+.secondparent_firstchild .secondparent_1_firstchild ul li.actived{
+    background-image: url("../img/list2/list2_secondchild3.png");
+    /* background:#cfcfcf; */
+    background:#f3f3f3;
+}
+/* 设置狗狗商品隐藏部分 */
+/* .secondparent_firstchild .secondparent_1_firstchild ul li>ul{
+    position: relative;
+}
+.secondparent_firstchild .secondparent_1_firstchild ul li>ul>li{
+    background: #0c6;
+    position: absolute;
+    display: none;
+    width: 90px;
+    height: 40px;
+    display:flex;
+	flex-flow:row nowrap;
+    justify-content:space-between;
+} */
+.secondparent_firstchild .secondparent_1_secondchild{
+    display:flex;
+	flex-flow:column nowrap;
+    justify-content:flex-start;
+}
+.secondparent_firstchild .secondparent_1_secondchild .div1{
+    display:flex;
+	flex-flow:column wrap;
+    justify-content:flex-start;
+}
+.secondparent_firstchild .secondparent_1_secondchild .div1 div{
+    display:flex;
+	flex-flow:row wrap;
+    justify-content:space-between;
+}
+.secondparent_firstchild .secondparent_1_secondchild .div1 img{
+    width: 190px;
+    height: 170px;
+}
+.secondparent_firstchild .secondparent_1_secondchild>p{
+    text-align: center;
+    font-size:16px;
+    color:#333;
+    height: 42px;
+    line-height: 42px;
+}
+.secondparent_firstchild .secondparent_1_secondchild div span:first-child{
+    color:#e53;
+}
+.secondparent_firstchild .secondparent_1_secondchild div span:last-child{
+    color:#999;
+}
+.secondparent_firstchild .secondparent_1_lastchild:last-child{
+    display:flex;
+	flex-flow:column nowrap;
+    justify-content:flex-start;
+    margin-top:20px;
+}
+.secondparent_firstchild .secondparent_1_lastchild:last-child 
+div:first-child{
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size:16px;
+    color:#333;
+}
+.secondparent_firstchild .secondparent_1_lastchild:last-child 
+div:last-child ul{
+    width: 190px;
+    display:flex;
+	flex-flow:row wrap;
+    justify-content:flex-start;
+    /* border:1px solid red; */
+}
+.secondparent_firstchild .secondparent_1_lastchild:last-child 
+div:last-child ul li{
+    width:93px;
+    height:50px;
+    border:1px solid #e6e6e6;
+}
+.secondparent_firstchild .secondparent_1_lastchild:last-child 
+div:last-child img{
+    width: 100%;
+}
+.secondparent_secondchild{
+    margin-left: 30px;
+    display:flex;
+	flex-flow:column nowrap;
+    justify-content:flex-start;
+}
+.secondparent_secondchild .secondparent_2_firstchild{
+    display:flex;
+	flex-flow:column nowrap;
+    justify-content:flex-start;
+}
+.secondparent_secondchild .secondparent_2_firstchild .secondparent_2_secondgrandson{
+    margin-top:20px;
+}
+.secondparent_secondchild .secondparent_2_firstchild
+.secondparent_2_firstgrandson,.secondparent_2_secondgrandson{
+    display:flex;
+	flex-flow:row nowrap;
+    justify-content:flex-start;
+    border-bottom:1px solid #ddd;
+}
+.secondparent_secondchild .secondparent_2_firstchild
+.secondparent_2_firstgrandson div:first-child,
+.secondparent_2_secondgrandson div{
+    display:flex;
+	flex-flow:row nowrap;
+    justify-content:flex-start;
+}
+.secondparent_secondchild .secondparent_2_firstchild
+.secondparent_2_firstgrandson div:first-child ul,
+.secondparent_2_secondgrandson div ul{
+    display:flex;
+	flex-flow:row wrap;
+    justify-content:flex-start;
+    /* border:1px solid red; */
+    width: 820px;
+    height: 50px;
+}
+.secondparent_secondchild .secondparent_2_firstchild
+.secondparent_2_firstgrandson div:first-child ul li,
+.secondparent_2_secondgrandson div ul li{
+    width: 130px;
+    height: 16px;
+    /* border:1px solid pink; */
+}
+.secondparent_secondchild .secondparent_2_firstchild
+.secondparent_2_firstgrandson div:first-child p,
+.secondparent_2_secondgrandson div p{
+    width: 70px;
+    height: 16px;
+    line-height: 16px;
+    color:#999;
+}
+.secondparent_secondchild .secondparent_2_firstchild
+.secondparent_2_firstgrandson div:first-child ul li a,
+.secondparent_2_secondgrandson div ul li a{
+    color:#08d;
+}
+.secondparent_secondchild .secondparent_2_firstchild
+.secondparent_2_firstgrandson div:first-child ul li a:hover{
+    color:#e53;
+}
+.secondparent_secondchild .secondparent_2_firstchild
+.secondparent_2_firstgrandson div:last-child span:last-child{
+    background-image: url("../img/list2/list2_secondchild1.png");
+    background-repeat: no-repeat;
+    background-position:22px 6px; 
+}
+.secondparent_secondchild .secondparent_2_firstchild
+.secondparent_2_secondgrandson div ul li a:hover{
+    color:#e53;
+}
+.secondparent_secondchild .secondparent_2_firstchild
+.secondparent_2_firstgrandson div:last-child{
+    width: 100px;
+}
+.secondparent_secondchild .secondparent_2_firstchild
+.secondparent_2_firstgrandson div:last-child span{
+    display: inline-block;
+    width: 34px;
+    /* border:1px solid #000; */
+}
+.secondparent .secondparent_secondchild .secondparent_2_secondchild{
+    width: 980px;
+    height:38px;
+    line-height: 38px;
+    border: 1px solid #ddd;
+    background:#f3f3f3;
+    margin-top:20px;
+    display:flex;
+	flex-flow:row nowrap;
+    justify-content:space-between;
+}
+.secondparent_2_secondchild div:first-child{
+    display:flex;
+	flex-flow:row nowrap;
+    justify-content:flex-start;
+}
+.secondparent_2_secondchild div:first-child ul{
+    display:flex;
+	flex-flow:row nowrap;
+    justify-content:flex-start;
+}
+.secondparent_2_secondchild div:first-child ul li{
+    text-align: center;
+    line-height: 28px;
+    margin-top:4px;
+    width:65px;
+    height:28px;
+    background:#fff;
+    border:1px solid #999;
+    margin-left:10px;
+    background-image: url("../img/list2/list2_firstchild1.png");
+    background-repeat: no-repeat;
+    background-position: 45px 8px;
+}
+.secondparent_2_secondchild div:first-child ul li:nth-child(4){
+    background-image: url("../img/list2/list2_firstchild2.png");
+    background-repeat: no-repeat;
+    background-position: 45px 8px;
+}
+.secondparent_2_secondchild div:first-child ul li.actived{
+    background:#e53;
+}
+.secondparent_2_secondchild div:first-child ul li a.actived{
+    color:#fff;
+}
+.secondparent_2_secondchild div:first-child ul li+li{
+    margin-left:10px;
+}
+.secondparent_2_secondchild div:first-child input{
+    margin-top: 12px;
+    margin-left:20px;
+    width: 15px;
+    height:15px;
+    background:#fff;
+}
+.secondparent_2_secondchild div:last-child span{
+    display: inline-block;
+    margin-right:10px;
+}
+.secondparent_2_secondchild div:last-child button{
+    margin-right: 10px;
+    width: 26px;
+    height: 26px;
+    background:#e6e6e6;
+    border:1px solid #ccc;
+}
+.secondparent .secondparent_secondchild .secondparent_2_lastchid{
+    width: 1000px;
+    display:flex;
+	flex-flow:row wrap;
+    justify-content:flex-start;
+}
+.secondparent .secondparent_secondchild 
+.secondparent_2_lastchid .secondparent_2_biggrandson:hover{
+    border:3px solid #e53;
+}
+.secondparent_secondchild .secondparent_2_lastchid 
+.secondparent_2_biggrandson{
+    /* margin-left: 10px; */
+    margin-top:10px;
+    padding:4px; 
+    width:230px;
+    display:flex;
+	flex-flow:column wrap;
+    justify-content:center;
+    border:3px solid #fff;
+}
+.secondparent_secondchild .secondparent_2_lastchid div>div{
+    display:flex;
+	flex-flow:row wrap;
+    justify-content:flex-start;
+    /* border:1px solid red; */
+}
+.secondparent_2_biggrandson .secondparent_2_firstgrandson{
+    position: relative;
+}
+.secondparent_2_biggrandson .secondparent_2_firstgrandson 
+img:first-child{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    float: left;
+}
+.secondparent_2_biggrandson .secondparent_2_firstgrandson 
+img:last-child{
+    width:210px;
+    height:210px;
+}
+.secondparent_2_biggrandson .secondparent_2_secondgrandson{
+    height: 22px;
+    line-height: 22px;
+    font-size:16px;
+}
+.secondparent_2_biggrandson .secondparent_2_secondgrandson 
+span:first-child{
+    color:#e53;
+}
+.secondparent_2_biggrandson .secondparent_2_secondgrandson 
+span:last-child{
+    color:#999;
+}
+.secondparent_2_biggrandson .secondparent_2_thiredgrandson div{
+    width: 28px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+}
+.secondparent_2_biggrandson .secondparent_2_thiredgrandson 
+div:first-child{
+    background: #e53;
+    color:#fff;
+}
+.secondparent_2_biggrandson .secondparent_2_thiredgrandson 
+div:last-child{
+    border:1px solid #e53;
+    color: #e53;
+    margin-left:2px;
+}
+.secondparent_2_biggrandson .secondparent_2_fourthgrandson span{
+    display: inline-block;
+    width: 46px;
+    height: 18px;
+    background: #0c6;
+    color:#fff;
+    text-align: center;
+    line-height: 18px;
+}
+.secondparent_2_biggrandson>p{
+    height: 22px;
+    line-height: 22px;
+    color:#e53;
+}
+.secondparent_2_biggrandson .secondparent_2_fifthgrandson{
+    height: 30px;
+    line-height: 30px;
+}
+.secondparent_2_biggrandson .secondparent_2_fifthgrandson span:first-child{
+    color:#999;
+}
+.secondparent_2_biggrandson .secondparent_2_fifthgrandson span em{
+    color:#e53;
+}
+/* .secondparent_2_biggrandson .secondparent_2_lastgrandson {
+    display:flex;
+	flex-flow:row nowrap;
+    justify-content:center !important;
+     background: #000; 
+} */
+.secondparent_2_biggrandson .secondparent_2_lastgrandson 
+div:first-child{
+    width: 134px;
+    height:30px;
+    line-height: 30px;
+    /* text-align: center; */
+    justify-content: center;
+    /* background-image: url("../img/list2/list2_goshopping2.png"); */
+    /* background-repeat:no-repeat; */
+    /* background-position:65px 8px;   */
+}
+.secondparent_2_lastchid .secondparent_2_biggrandson .secondparent_2_lastgrandson 
+div:last-child{
+    width: 96px;
+    height:30px;
+    line-height: 30px;
+    text-align: center !important;
+    background-image: url("../img/list2/list2_shouchang2.png");
+    background-repeat:no-repeat;
+    background-position:30px 8px;
+}
+.secondparent_2_biggrandson .secondparent_2_lastgrandson 
+div:first-child:hover{
+    background:#e53;
+    color:#fff;
+    /* background-image: url("../img/list2/list2_goshopping1.png"); */
+    /* background-repeat:no-repeat; */
+    /* background-position:65px 8px;  */
+}
+.secondparent_2_biggrandson .secondparent_2_lastgrandson 
+div:last-child:hover{
+    background:#e53;
+    color:#fff;
+    background-image: url("../img/list2/list2_shouchang3.png");
+    background-repeat:no-repeat;
+    background-position:30px 8px;
+}
+.lastparent{
+    /* width: 900px; */
+    height:40px;
+    line-height: 40px;
+    /* margin-left:348px; */
+    margin-top:30px;
+    font-size:14px;
+    display:flex;
+	flex-flow:row nowrap;
+    justify-content:flex-end;
+    /* border:1px solid pink; */
+}
+.lastparent .lastparent_firstchild ul{
+    display:flex;
+	flex-flow:row nowrap;
+    justify-content:space-between;
+    /* border:1px solid pink; */
+}
+.lastparent .lastparent_firstchild ul li{
+    text-align: center;
+    border:1px solid #e6e6e6;
+    margin-left:10px;
+    width: 35px;
+}
+.lastparent .lastparent_firstchild ul li:nth-child(2),
+.lastparent .lastparent_firstchild ul li:nth-child(12){
+    width: 83px;
+}
+.lastparent .lastparent_firstchild ul li:first-child,
+.lastparent .lastparent_firstchild ul li:last-child{
+    width:54px;
+}
+.lastparent .lastparent_firstchild ul .actived{
+    background:#e53;
+}
+.lastparent .lastparent_firstchild ul li a.actived{
+    color:#fff;
+}
+.lastparent .lastparent_firstchild ul li:hover{
+    border:1px solid #e53;
+}
+.lastparent .lastparent_lastchild input{
+    width: 38px;
+    height: 30px;
+}
+.lastparent .lastparent_lastchild button{
+    width: 54px;
+    height: 34px;
+    background:#fff;
+    border:1px solid #e6e6e6
+}

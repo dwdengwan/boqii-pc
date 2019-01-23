@@ -1,0 +1,254 @@
+*{
+	padding:0px;margin:0px;
+}
+body{
+	margin:0 auto;
+    width:1300px;
+}
+/* 消除所有ul>li中的点 */
+ul>li{
+	list-style-type:none;
+}
+a{
+	color:#333;
+	text-decoration:none;
+}
+a:hover{
+    color:#e53;
+    text-decoration:none;
+}
+.grandfather{
+    display:flex;
+	flex-flow:column nowrap;
+    justify-content:center;
+}
+.frist_parent{
+    margin-top:20px;
+    height: 35px;
+    border-bottom: 2px solid #ddd;
+    display:flex;
+	flex-flow:row nowrap;
+    justify-content:space-between;
+}
+.frist_parent ul{
+    display:flex;
+	flex-flow:row nowrap;
+    justify-content:space-around;
+    margin-left:50px;
+    margin-right:100px;
+}
+.frist_parent ul li{
+    margin-left:10px;
+    margin-right:10px;
+}
+.frist_parent_firstchild1 {
+    display:flex;
+	flex-flow:column nowrap;
+    justify-content:space-around;
+}
+.frist_parent_firstchild1 .frist_parent_firstdiv1{
+    width: 80px;
+    height:25px;
+    text-align:center;
+    position: relative;
+    vertical-align: middle;
+    margin-top: 2px;
+}
+.frist_parent_firstdiv1 .frist_parent_lastdiv1{
+    position: absolute;
+    display: none;
+}
+.frist_parent_firstdiv1:hover .frist_parent_lastdiv1{
+    display: block;
+    /* margin-top:10px; */
+    margin-left:-10px;
+}
+.frist_parent_firstdiv1:hover{
+    height:25px;
+    width: 80px;
+    border:1px solid #aaa;
+    background:pink;
+}
+.frist_parent_firstdiv2{
+    position: relative;
+}
+.frist_parent_lastdiv2{
+    position: absolute;
+    display: none;
+}
+.frist_parent_firstdiv2:hover{
+    height:25px;
+    width: 80px;
+    border:1px solid #aaa;
+    background:pink;
+}
+.frist_parent_firstdiv2:hover .frist_parent_lastdiv2{
+    display: block;
+    /* margin-top:10px; */
+    margin-left:-10px;
+}
+.frist_parent_firstdiv3{
+    position: relative;
+}
+.frist_parent_lastdiv3{
+    position: absolute;
+    display: none;
+}
+.frist_parent_firstdiv3:hover .frist_parent_lastdiv3{
+    display: block;
+    width: 220px;
+    margin-left:-40px;
+    /* margin-top:10px; */
+    display:flex;
+	flex-flow:row nowrap;
+    justify-content:space-around;
+    border: 1px solid #aaa;
+    background:pink;
+}
+.frist_parent_lastdiv3 p{
+    font-weight: bold;
+    margin:0px;
+    padding:0px;
+    font-size:13px;
+}
+.frist_parent_lastdiv3 p:nth-child(3),.frist_parent_lastdiv3 p:last-child{
+    border:1px solid #aaa;
+}
+.frist_parent_firstdiv3:hover{
+    height:25px;
+    width: 80px;
+    border:1px solid #aaa;
+    background:pink;
+}
+.second_parent{
+    background: #ddd;
+    display:flex;
+	flex-flow:row nowrap;
+    justify-content:space-around;
+    /* border:1px solid red;   */
+}
+.second_parent_secondchild{
+    margin-left:-380px;
+    margin-right:330px;
+    margin-top:30px;
+    font-size:24px;
+}
+.second_parent_lastchild{
+    font-size:12px;
+    margin-top:65px;
+}
+.second_parent img{
+    width:190px;
+    height:90px;
+    margin-left:-80px;
+    margin-right:100px;
+}
+.last_parent{
+    display:flex;
+	flex-flow:row nowrap;
+    justify-content:space-around;  
+    border:1px solid #ddd;
+    /* border:1px solid red; */
+}
+.last_parent .last_parent_fristchild{
+    display:flex;
+	flex-flow:column nowrap;
+    justify-content:flex-start; 
+    /* border:1px solid red; */
+    width: 720px;
+    margin-left:60px;
+    margin-right:240px;
+}
+.last_parent_fristchild .li1 div{
+    width:110px;
+    height:40px;
+    vertical-align: bottom;
+    text-align:center;
+    line-height:2;
+    font-size:20px;
+    border-bottom:2px solid red;
+}
+.last_parent_fristchild .li2 {
+    height:40px;
+    font-size:15px;
+    line-height: 3;
+}
+.last_parent_fristchild .li2 input{
+    width:230px;
+    height:28px;
+    bottom:2px;
+}
+.last_parent_fristchild .li3 {
+    height:40px;
+    font-size:15px;
+    line-height: 3;
+}
+.last_parent_fristchild .li3 input{
+    width:125px;
+    height:28px;
+    bottom:2px;
+}
+.last_parent_fristchild img{
+    color:red;
+    height: 20px;
+    border:0;
+}
+.last_parent_fristchild ul li span{
+    color:red;
+    font-weight: bold;
+}
+.last_parent_fristchild #li1{
+    display:flex;
+	flex-flow:row nowrap;
+    justify-content:flex-start; 
+}
+.last_parent_fristchild #li1 input{
+    margin-top:10px;
+}
+.last_parent_fristchild #li1 div{
+    margin-left:10px;
+    margin-top:8px;
+    line-height:30px !important;
+    font:italic bold 18px "黑体";
+    background: #aaa;
+    text-align:center;
+    height:30px;
+    width:150px;
+}
+.last_parent_fristchild #li1 div:hover{
+    background:pink;
+}
+#li3{
+    margin-left:-15px;
+}
+#li3 button{
+    line-height: 1;
+    width:110 px;
+    height:28px;
+    margin-left:10px;
+}
+.last_parent_fristchild .li4{
+    font-size:12px;
+    /* text-align:center; */
+    margin-top:20px;
+    margin-left:70px;
+}
+.last_parent_fristchild .li5{
+    /* text-align:center; */
+    font-size:24px;
+    line-height:2;
+    margin-top:30px;
+    margin-left:70px;
+}
+.last_parent_fristchild .li5 input{
+    width: 250px;
+    height:46px;
+    background:#f65;
+    border:1px solid #f65;
+}
+.last_parent_fristchild .li5 input:hover{
+    background: pink;
+}
+.last_parent_lastchild{
+    margin-right: 100px;
+}

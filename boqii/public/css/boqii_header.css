@@ -1,0 +1,257 @@
+/* 清除所有元素的内外边距 */
+*{
+	padding:0px;margin:0px;
+}
+body{
+	margin:0 auto;
+    width:1300px;
+}
+/* 消除所有ul>li中的点 */
+ul>li{
+	list-style-type:none;
+}
+.header_parent{
+	font-size: 16px;
+	height:37px;
+	display:flex;
+	flex-flow:row nowrap;
+	justify-content:space-between;
+	margin-left:50px;
+}
+.header_parent,.h2_parent,.h3_parent{
+	margin-left:-22px;
+}
+/* 给第一个父元素 父元素2 弹性布局 以x轴为主轴 不换行 间距相等 */
+.h2_parent,.h2_second_grandson ul{
+	display:flex;
+	flex-flow:row nowrap;
+	justify-content:space-between;
+}
+.h3_parent,.h3_parent_secondchild ul{
+	display:flex;
+	flex-flow:row nowrap;
+	justify-content:space-around;
+}
+/* 给父元素 h2父元素设置边框 */
+/* space-between */
+.header_parent,.h2_parent{
+	border:1px solid #666;
+}
+/* 使a元素恢复 普通样式 */
+a{
+	color:#333;
+	text-decoration:none;
+}
+/* 点击a元素 字体颜色变色 */
+a:hover{
+	color:#e53;
+	text-decoration:none;
+}
+/* 设置header 下的第一个子元素 第二个子元素 第三个子元素的ul 设置字体居中 */
+.header_parent .header_frist_child,.header_parent .header_second_child,
+.header_parent .header_thired_child ul
+{
+	line-height:2;
+}
+.header_thired_child ul{
+	display:flex;
+	flex-flow:row nowrap;
+	justify-content:flex-start;
+}
+.header_thired_child ul li+li{
+	margin-left:10px;
+}
+.header_frist_child,.h2_frist_child img{
+	margin-left:60px;
+}
+.header_frist_child a{
+	margin-left:0px;
+}
+.header_thired_child ul,.h2_last_child img{
+	margin-right:80px;
+}
+.h3_parent_lastchild{
+	margin-right:35px;
+}
+.header_second{
+	width:50px;
+	height:30px;
+	position: relative;
+}
+.header_second_child {
+	display:flex;
+	flex-flow:row nowrap;
+	justify-content:space-around;
+	margin-left:-500px;
+	text-align:center;
+	line-height: 2;
+}
+.header_second_child .s1{
+	margin-top:10px;
+}
+.header_second_grandson{
+	position: absolute;
+	display: none;
+}
+.header_second:hover .header_second_grandson{ 
+	display:block;
+	border:1px solid #666;
+	width:400px;
+	height:200px;
+	background:#fff;
+}
+.area{
+	border-top:1px solid #666;
+	border-bottom:1px solid #666;
+}
+.header_second_child .s1{
+	width:0px;
+	height:0px;
+	border-left:10px solid transparent;
+	border-right:10px solid transparent;
+	border-top:10px solid red;
+}
+.header_second_child .s1:hover{
+	transform: rotate(180deg);
+}
+/* .header_second:hover{
+	display:inline-block;
+	width: 100px;
+	height:100px;
+	border: 2px solid #e53;
+	position: absolute;
+	color: #000;
+}
+.header_second{
+	color:#e53;
+} */
+.h2_second_child ,.h2_last_child{
+	margin-top:40px;
+}
+.h3_parent_secondchild ul li+li,.h3_parent_secondchild ul li{
+	padding-left:17px;
+	padding-right:17px;
+	font-size:16px;
+	color:white;
+}
+.h3_parent_secondchild ul li{
+	height:37px;
+	text-align: center;
+}
+.h3_parent_secondchild .h3_parent_secondgrand{
+	background: #9a0000;
+}
+.h3_parent_secondchild ul li:hover{
+	background:#9a0000;
+}
+.h2_parent .h2_second_child,.h2_parent .h2_last_child{
+	line-height:3;
+}
+.h2_parent .h2_second_child ul{
+	padding:0px;margin:0px;
+	bottom:100px;
+}
+.h2_parent .h2_second_child div{
+	/* display:flex;
+	flex-flow:row nowrap;
+	justify-content:space-around; */
+	text-align:center;
+}
+.h2_parent .h2_second_child input{
+	height:40px;
+	width:517px;
+	border:3px solid #e53;
+}
+.h2_parent .h2_second_child button{
+	height:40px;
+	color:white;
+	line-height: 2;
+	margin-left:-4px;
+	width:80px;
+	background:#e53;
+	border:4px solid #e53;
+}
+.h2_parent .h2_second_child button:hover{
+	background: #fff;
+}
+.h2_parent .h2_last_child span{
+	font:bolder 20px '黑体';
+	color:#e53;
+}
+.h3_parent{
+	height:37px;
+	background:#e53;
+}
+.h3_parent_secondchild ul{
+	/* padding-top:10px; */
+	line-height: 2;
+	text-align: center;
+}
+.h3_parent_lastchild ,.h3_parent_fristchild {
+	padding-top:15px;
+	font:bolder 16px '黑体';
+	background:#c20;
+	text-align: center;	
+}
+.h3_parent_fristchild {
+	width:190px;
+}
+.h3_parent_lastchild{
+	width:120px;
+}
+.h4_parent{
+	position: fixed;
+	margin-left:1260px;
+	margin-top:-237px;
+	width:40px;
+	height:100%;
+	border:2px solid #000;
+	background:#666;
+}
+.h4_parent .li3:hover{
+	background:#0ea369;
+}
+.h4_parent .li4:hover{
+	background:#0ea369;
+}
+.h4_parent .li5:hover{
+	background:#0ea369;
+}
+.h4_parent .li6:hover{
+	background:#0ea369;
+}
+.h4_parent .li7:hover{
+	background:#0ea369;
+}
+.h4_parent .li9:hover{
+	background:#0ea369;
+}
+.h4_parent div{
+	font:bold 20px "黑体" ;
+	text-align: center;
+	color:red;
+	width:40px;
+	border:2px solid #000;
+	line-height:2;
+}
+.h4_parent .li1{
+	height:70px;
+}
+.h4_parent .li2{
+	height:20px;
+}
+.h4_parent .li3{
+	height:120px;
+}
+.h4_parent .li4,.h4_parent .li5,.h4_parent .li6,.h4_parent .li7{
+	height:80px;
+}
+.h4_parent .li7{
+	line-height: 4;
+}
+.h4_parent .li8{
+	height:70px;
+}
+.h4_parent .li9{
+	height:50px;
+}

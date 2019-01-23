@@ -1,0 +1,49 @@
+$(function(){
+    $.ajax({
+        url:"http://127.0.0.1:3000/getGoodsList",
+        type:"get",
+        dataType:"json"})
+        .then(function(result){
+        new Vue({
+            el:"#main",
+            data:{
+                list:[],
+            },
+            created(){
+                this.list=result.data;
+            }
+        })
+        });
+    $.ajax({
+        url:"http://127.0.0.1:3000/getRmList",
+        type:"get",
+        dataType:"json"
+    }).then(function(result){
+        // console.log(result);
+        new Vue({
+            el:"#rm",
+            data:{
+                list:[],
+            },
+            created(){
+                this.list=result.data;
+            }
+        })
+    });
+    $.ajax({
+        url:"http://127.0.0.1:3000/getPptjList",
+        data:"get",
+        dataType:"json"
+    }).then(function(result){
+        console.log(result);
+        new Vue({
+            el:"#pptj",
+            data:{
+                list:[],
+            },
+            created(){
+                this.list=result;
+            }
+        })
+    })
+})

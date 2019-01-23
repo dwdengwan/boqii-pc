@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <script src="js/js/jquery.min.js"></script>
+    <script src="js/js/popper.min.js"></script>
+    <script src="js/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/boqii_login.css">
+    <script src="js/boqii_header.js"></script>
+    <script src="js/boqii_footer.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header id="header"></header>
+    <div class="parent">
+        <div class="frist_child">
+            <div>
+                <img src="img/login/logo2.png" alt="">
+            </div>
+            <div>
+                <span>|&nbsp;&nbsp;用户登录</span>
+            </div>
+        </div>
+        <div class="second_child">
+            <div>
+                <img src="img/login/log3.jpg" alt="">
+            </div>
+            <div class="thired_child">
+                <ul>
+                    <li class="thired_child_li1">
+                        <div class="thired_child_d1" id="ddd1">
+                            <span><a href="#">账号密码登录</a></span>
+                        </div>
+                        <div class="thired_child_d1">
+                            <span><a href="#">手机动态码登录</a></span>
+                        </div>
+                    </li>
+                    <li class="thired_child_li2">
+                        <div class="thired_child_d2">
+                            <div>
+                                <img src="img/login/login - 2.png" alt="图片1">
+                            </div>
+                            <div>
+                                <input type="text" name="uphone" id="uphone" placeholder="请输入账号(手机号)">
+                                <span></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="thired_child_li2">
+                        <div class="thired_child_d2">
+                            <div>
+                                <img src="img/login/login - 3.png" alt="图片2">
+                            </div>
+                            <div>
+                                <input type="password" name="upwd" id="upwd" placeholder="请输入密码(8~16个数字,字母或符号)">
+                                <span></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="thired_child_li3">
+                        <div class="thired_child_d3">
+                            <div class="thired_child_d4">
+                                <span>验证码：</span>
+                                <input type="text" name="auth_code">
+                            </div>
+                            <div class="thired_child_d5" id="yzm">
+                                <span><img src="img/login/vcode.png" alt="图片3"></span> 
+                                <a href="javascript:;">换一张</a>
+                                <span></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="thired_child_d6">请输入密码！！！</div>
+                    </li>
+                    <li class="thired_child_li4">
+                        <div><input type="checkbox">自动登录</div>
+                        <div class="dd"><a href="#">忘记密码</a>|<a href="#">免费注册</a></div>
+                    </li>
+                    <li>
+                        <!-- <div class="thired_child_d7"><a href="#">登录</a></div> -->
+                        <button>
+                            <input type="button" value='登录' class="thired_child_d7" onclick='postlogin()'>
+                        </button>
+                    </li>
+                    <li>
+                        <div class="thired_child_d8"><span>使用合作网站账号登录</span></div>
+                    </li>
+                    <li>
+                        <div>
+                            <ul id="thired_child_ul2">
+                                <li>
+                                    <a href="#">支付宝 </a><sppan>|</sppan>
+                                </li>
+                                <li>
+                                    <a href="#">新浪微</a><sppan>|</sppan>
+                                </li>
+                                <li>
+                                    <a href="#">微信</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="last">
+        <input type="text">
+        <span></span>
+    </div>
+    <footer id="footer"></footer>
+    <script src="js/js/jquery-1.11.3.js"></script>
+    <script src="js/boqii_login.js"></script>
+</body>
+</html>

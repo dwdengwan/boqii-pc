@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <script src="js/js/jquery.min.js"></script>
+    <script src="js/js/popper.min.js"></script>
+    <script src="js/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/boqii_goshopping.css">
+    <script src="js/js/vue.js"></script>
+    <script src="js/boqii_header.js"></script>
+    <script src="js/boqii_footer.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header id="header"></header>
+    <div id="grandparent">
+        <div class="frist_father">
+            <div class="fristfather_firstchild">
+                <img src="img/goshopping/shopnewlogo.png" alt="">
+            </div>
+            <div class="fristfather_secondchild">
+                <ul>
+                    <li><span>我的购物车</span></li>
+                    <li><span>核对订单信息</span></li>
+                    <li><span>订单提交成功</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="second_father">
+            <span>您还没有登录!</span>
+            <button>登录</button>
+            <span>后您的商品将永久保存在"购物车"中</span>
+        </div>
+        <div class="thired_father">
+            <span>波奇商城自营商品（江浙沪皖京津粤满59元即免运费)</span>
+            <a href="boqii_index1.html">继续购物 ></a>
+        </div>
+        <div class="fourth_father">
+            <div class="fourthfather_fristchild">
+                <ul>
+                    <li><input type="checkbox"><a href="javascript:;">全选</a></li>
+                    <li>商品</li>
+                    <li>重量</li>
+                    <li>波奇价(元)</li>
+                    <li>优惠</li>
+                    <li>数量</li>
+                    <li>小计(元)</li>
+                    <li>操作</li>
+                </ul>
+            </div>
+            <div class="fourthfather_secondchild">
+                <ul>
+                    <li><input type="checkbox"><img :src="img1" alt=""></li>
+                    <li>
+                        <a href="#">{{title1}}</a>
+                    </li>
+                    <li>{{weight1}}</li>
+                    <li>{{price1}}</li>
+                    <li>{{save1}}</li>
+                    <li>
+                        <button @click="change(-1)">-</button>
+                        <input type="text"  v-model="value">
+                        <button @click="change(+1)">+</button>
+                    </li>
+                    <li>{{Price}}</li>
+                    <li>
+                        <p><a href="javascript:;">移入收藏</a></p>
+                        <p><a href="javascript:;">删除</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="last_father">
+            <div class="lastfather_fristchild">
+                <ul>
+                    <li>
+                        <a href="javascript:;">
+                        <input type="checkbox" checked> 全选</a>
+                    </li>
+                    <li><a href="javascript:;">删除选中的商品</a></li>
+                    <li><a href="javascript:;">清空购物车</a></li>
+                </ul>
+            </div>
+            <div class="lastfather_secondchild">
+                <div class="lastfather_fristgrandson">
+                    <p>已选择1件商品（总重：5.87kg），总价（不含运费）：<span>¥{{Price}}</span></p>
+                    <p>已节省：¥0.00</p>
+                    <p>总价= 商品总价: ¥{{Price}} + 全球购商品税费: ¥0.00</p>
+                </div>
+                <div class="lastfather_secondgrandson"><button>去结算</button></div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer"></footer>
+    <script src="js/js/jquery-1.11.3.js"></script>
+    <script>
+        new Vue({
+            el:"#grandparent",
+            data:{
+                img1:"img/goshopping/shoppicpath11539745064_y.jpg",
+                title1:"小佩Petkit 宠物智能猫窝冬季保暖冬天空调窝四季通用小型犬狗窝",
+                weight1:"5.87kg",
+                save1:"0.0",
+                price1:"899.00",
+                value:1,
+                Price:"899.00"
+            },
+            methods: {
+                change(i){
+                    if(this.value>=1)
+                    this.value+=i;
+                    else this.value=1;
+                    this.Price=(this.price1*this.value).toFixed(2);
+                }
+            },
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <script src="js/js/jquery.min.js"></script>
+    <script src="js/js/popper.min.js"></script>
+    <script src="js/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/boqii_list.css">
+    <script src="js/js/vue.js"></script>
+    <script src="js/js/axios.min.js"></script>
+    <script src="js/boqii_header.js"></script>
+    <script src="js/boqii_footer.js"></script>
+</head>
+<body>
+    <header id="header"></header>
+    <div class="grandparent">
+        <div class="firstparent">
+            <div class="firstparent_firstchild">
+                <ul>
+                    <li><a href="javascript:;">狗狗主粮</a></li>
+                    <li><a href="javascript:;">狗狗粮食</a></li>
+                    <li><a href="javascript:;">医疗护理</a></li>
+                    <li><a href="javascript:;">营养保健</a></li>
+                    <li><a href="javascript:;">生活日用</a></li>
+                    <li><a href="javascript:;">出行装备</a></li>
+                    <li><a href="javascript:;">狗狗美容</a></li>
+                    <li><a href="javascript:;">狗狗玩具</a></li>
+                </ul>
+            </div>
+            <div class="firstparent_secondchild">
+                <ul class="lunbotu">
+                <li class="show" v-for="key of list"><img :src="key.img_url" alt=""></li>
+                <!-- <li><img src="img/list/list_headerfirst1.jpg" alt=""></li>
+                <li><img src="img/list/list_headerfirst2.jpg" alt=""></li>
+                <li><img src="img/list/list_headerfirst3.jpg" alt=""></li>
+                <li><img src="img/list/list_headerfirst4.jpg" alt=""></li> -->
+                </ul>
+            </div>
+            <div class="firstparent_lastchild">
+                <img src="img/list/list_firstparent1.jpg" alt="">
+                <img src="img/list/list_firstparent1.jpg" alt="">
+                <img src="img/list/list_firstparent1.jpg" alt="">
+            </div>
+        </div>
+        <div class="secondparent" id="gougou">
+            <div class="secondparent_fristchild">
+                <ul>
+                    <li><h2><a href="javascript:;">狗狗商品推荐</a></h2></li>
+                    <li @mouseover="change1()"><a href="javascript:;">离乳期犬</a></li>
+                    <li @mouseover="change2()"><a href="javascript:;">幼犬</a></li>
+                    <li @mouseover="change3()"><a href="javascript:;">成犬</a></li>
+                    <li @mouseover="change4()"><a href="javascript:;">老犬</a></li>
+                </ul>
+                <ul>
+                    <li><a href="javascript:;">幼犬粮</a></li>
+                    <li><a href="javascript:;">成犬粮</a></li>
+                    <li><a href="javascript:;">老年犬粮</a></li>
+                    <li><a href="javascript:;">全期犬粮</a></li>
+                    <li><a href="javascript:;">罐头</a></li>
+                    <li><a href="javascript:;">妙鲜包</a></li>
+                    <li><a href="javascript:;">肉质零食</a></li>
+                    <li><a href="javascript:;">洁齿咬胶</a></li>
+                </ul>
+            </div>
+            <div class="secondparent_secondchild">
+                <ul id="ggtj">
+                    <li v-for="key of list">
+                        <img :src="key.img_url" alt="">
+                        <p><a href="javascipt:;">{{key.title}}</a></p>
+                        <p><span>¥ {{key.price}}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>已售{{key.num}}</span></p> 
+                   </li>
+                     <!-- <li>
+                        <img :src="img1" alt="">
+                        <p><a href="javascipt:;">山羊奶粉450g 适用幼...</a></p>
+                        <p><span>¥ 98.00</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>已售45094</span></p> 
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+        <div class="thiredparent" id="listFirst">
+            <div class="thiredparent_firstchild">
+                <div class="thiredparent_firstchild_firstgrandson">
+                    1F 粮食专区 »
+                </div>
+                <div class="thiredparent_firstchild_secondgrandson">
+                    <ul class="thiredparent_secondgrandson_ul">
+                        <li @mouseover="change5()"><a href="javascript:;">博美犬粮</a></li>
+                        <li @mouseover="change6()"><a href="javascript:;">博爱犬粮</a></li>
+                        <li @mouseover="change7()"><a href="javascript:;">什么犬粮</a></li>
+                        <li @mouseover="change8()"><a href="javascript:;">我也犬粮</a></li>
+                        <li @mouseover="change9()"><a href="javascript:;">不知犬粮</a></li>
+                    </ul>
+                </div>
+                <div class="thiredparent_firstchild_lastgrandson">
+                    <ul class="thiredparent_lastgrandson_ul">
+                        <li><a href="javascript:;">进口犬粮</a></li>
+                        <li><a href="javascript:;">国产犬粮</a></li>
+                        <li><a href="javascript:;">冻干犬粮</a></li>
+                        <li><a href="javascript:;">犬粮食</a></li>
+                        <li><a href="javascript:;">犬用罐头</a></li>
+                        <li><a href="javascript:;">妙鲜包</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="thiredparent_secondchild">
+                <ul>
+                    <li>
+                        <img :src="img2" alt="">
+                        <p><a href="javascipt:;">山羊奶粉450g 适用幼...</a></p>
+                        <p><span>¥ 98.00</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>已售45094</span></p> 
+                    </li>
+                    <li>
+                        <img :src="img2" alt="">
+                        <p><a href="javascipt:;">山羊奶粉450g 适用幼...</a></p>
+                        <p><span>¥ 98.00</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>已售45094</span></p> 
+                    </li>
+                    <li>
+                        <img :src="img2" alt="">
+                        <p><a href="javascipt:;">山羊奶粉450g 适用幼...</a></p>
+                        <p><span>¥ 98.00</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>已售45094</span></p> 
+                    </li>
+                    <li>
+                        <img :src="img2" alt="">
+                        <p><a href="javascipt:;">山羊奶粉450g 适用幼...</a></p>
+                        <p><span>¥ 98.00</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>已售45094</span></p> 
+                    </li>
+                    <li>
+                        <img :src="img2" alt="">
+                        <p><a href="javascipt:;">山羊奶粉450g 适用幼...</a></p>
+                        <p><span>¥ 98.00</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>已售45094</span></p> 
+                    </li>
+                    <li>
+                        <img :src="img2" alt="">
+                        <p><a href="javascipt:;">山羊奶粉450g 适用幼...</a></p>
+                        <p><span>¥ 98.00</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>已售45094</span></p> 
+                    </li>
+                    <li>
+                        <img :src="img2" alt="">
+                        <p><a href="javascipt:;">山羊奶粉450g 适用幼...</a></p>
+                        <p><span>¥ 98.00</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>已售45094</span></p> 
+                    </li>
+                    <li>
+                        <img :src="img2" alt="">
+                        <p><a href="javascipt:;">山羊奶粉450g 适用幼...</a></p>
+                        <p><span>¥ 98.00</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>已售45094</span></p> 
+                    </li>
+                </ul>
+            </div>
+            <div class="thiredparent_lastchild">
+                <img src="img/list/list_list2.jpg" alt="">
+                <img src="img/list/list_list3.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <footer id="footer"></footer>
+    <script src="js/js/jquery-1.11.3.js"></script>
+    <script>
+         //商品一楼
+         new Vue({
+             el:"#listFirst",
+             data:{
+                img2:"img/list/list_first1.jpg",
+             },
+             methods:{
+                 change5(){
+                    this.img2="img/list/list_first1.jpg"
+                 },
+                 change6(){
+                    this.img2="img/list/list_first2.jpg"
+                 },
+                 change7(){
+                    this.img2="img/list/list_first3.jpg"
+                 },
+                 change8(){
+                    this.img2="img/list/list_first4.jpg"
+                 },
+                 change9(){
+                    this.img2="img/list/list_first5.jpg"
+                 },
+             }
+         })
+    </script>
+    <script>
+        (function(){
+        // 轮播图
+        var $lunbotu=$("ul.lunbotu");
+        var $img=$lunbotu.children("li");
+        var c=0;
+        setInterval(function(){
+            c++;
+            if(c==5){
+                c=0;
+            }
+            for(var i=0;i<$img.length;i++){
+            $img.css("display","none");
+            }
+            $($img[c]).css("display","block");
+        },3000)
+    })()
+    </script>
+    <script>
+    axios.get("http://127.0.0.1:3000/getListImages").then(res=>{
+        console.log(res.data);
+        new Vue({
+            el:".lunbotu",
+            data:{
+                list:[],
+            },
+            created() {
+                this.list=res.data;
+            },
+        })
+    });
+    axios.get("http://127.0.0.1:3000/getGgtjList").then(res=>{
+        console.log(res.data.data);
+        new Vue({
+            el:"#gougou",
+            data:{
+                list:[],
+                // key:[],
+            },
+            methods:{
+                 change1(){
+                     console.log(1111);
+                    // this.list[0]=this.key.img_url;
+                 },
+                 change2(){
+                    this.list[1]="img/list/listgougou2.jpg"
+                 },
+                 change3(){
+                    this.list[2]="img/list/listgougou3.jpg"
+                 },
+                 change4(){
+                    this.list[3]="img/list/listgougou4.jpg"
+                 },
+             },
+            created(){
+                this.list=res.data.data;
+                // this.change1();
+            }
+        })
+    })
+    </script>
+</body>
+</html> 
